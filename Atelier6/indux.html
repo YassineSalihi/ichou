@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sondage utilisateur</title>
+  <link rel="stylesheet" href="css1.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Sondage Utilisateur</h2>
+    <form id="sondageForm">
+      <div class="form-group">
+        <label for="nom">Nom (optionnel) :</label>
+        <input type="text" id="nom" name="nom" placeholder="Entrez votre nom">
+      </div>
+
+      <div class="form-group">
+        <label>Sexe :</label>
+        <label><input type="radio" name="sexe" value="Masculin"> Masculin</label>
+        <label><input type="radio" name="sexe" value="Féminin"> Féminin</label>
+      </div>
+
+      <div class="form-group">
+        <label>Note du produit :</label>
+        <div class="rating">
+          <label><input type="radio" name="note" value="1"> 1 étoile</label>
+          <label><input type="radio" name="note" value="2"> 2 étoiles</label>
+          <label><input type="radio" name="note" value="3"> 3 étoiles</label>
+          <label><input type="radio" name="note" value="4"> 4 étoiles</label>
+          <label><input type="radio" name="note" value="5"> 5 étoiles</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="satisfaction">Satisfaction générale :</label>
+        <input type="range" id="satisfaction" name="satisfaction" min="0" max="100" value="50">
+        <span id="satisfactionValue">50%</span>
+      </div>
+
+      <div class="form-group">
+        <label for="commentaires">Commentaires :</label>
+        <textarea id="commentaires" name="commentaires" rows="4" placeholder="Vos remarques ici..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label><input type="checkbox" id="accepter" name="accepter"> J'accepte les termes et conditions</label>
+      </div>
+
+      <div class="form-group">
+        <button id="submit-btn" type="button">Soumettre</button>
+      </div>
+    </form>
+
+    <div id="result"></div> <!-- Section pour afficher les résultats -->
+  </div>
+<script src="javas.js"></script>
+</body>
+</html>
